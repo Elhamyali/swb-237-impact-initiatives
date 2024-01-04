@@ -15,21 +15,38 @@ format:
 editor: visual
 ---
 
-## **Guidelines_2-3_Quant Data Analysis_Annex3**
+## **Overview**
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+This presentation provides an review of findings from relevant analytical process documents from Impact Initiatives, best practices, and recommendations for improvement. The documents reviewed in this presentation are:
+
+-   Guidelines_2-3_Quant Data Analysis_Annex3
+
+-   Github: cleaningtools
+
+-   Github: analysistools
+
+-   Github: presentresults
+
+## **Executive Summary**
+
+TBD
+
+## **Problem Statement**
+
+The Impact Initiatives team have faced challenges to solve for the below pain points. This report aims to solve for these issues and provide best practices in general.
+
+-   Handle missing data.
+
+-   Correct size bias in the assessment.
+
+-   Provide calibration techniques to help with better estimates.
+
+## **Guidelines_2-3_Quant Data Analysis_Annex3**
 
 ## Github: cleaningtools
 
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
-
 ## Github: analysistools
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-## Github: presentresults 
+## Github: presentresults
 
 ## 
