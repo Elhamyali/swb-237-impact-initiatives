@@ -8,11 +8,12 @@ format:
     show-slide-number: all
     chalkboard: 
       buttons: false
-    preview-links: true
+    preview-links: auto
     logo: images/swb.png
     footer: Published on January 4, 2024
     controls: true
 editor: visual
+bibliography: references.bib
 ---
 
 ## **Overview**
@@ -41,11 +42,267 @@ The Impact Initiatives team have faced challenges to solve for the below pain po
 
 -   Provide calibration techniques to help with better estimates.
 
+## **Example**
+
+This report uses the 2023 **Ukraine \| REACH Health Sector Need Assessment** dataset to illustrate examples of recommendations shared in this presentation.
+
+![](images/UKR2217a.png){fig-align="center"}
+
 ## **Guidelines_2-3_Quant Data Analysis_Annex3**
+
+### **Key sections**
+
+-   [1. "Sampling Frame" Section]
+
+-   [2. "Sample" Section]
+
+-   [3. "Extended DAP" Section]
+
+------------------------------------------------------------------------
+
+### **1. "Sampling Frame" Section**
+
+::: callout-note
+## About
+
+The "Sampling Frame" section includes information on cluster names, strata variables, and population data. It focuses on different localities, administrative levels, and household numbers.
+:::
+
+**Best practices observed:**
+
+-   Use of stratified sampling with multiple strata levels (e.g., locality, admin levels).
+
+-   Clear listing of variables and population numbers for different areas.
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Finding
+
+**Stratified sampling**: In the UKR2217a dataset, there is a variable 'oblast' that covers four areas: Vinnytska, Dnipropetrovska, Zaporizka oblasts and Kharkiv city. This is used to demonstrate how stratification works and that these areas are included in the sample. There will be demographic changes due to high-risk conflict zones with forced migration and displacement. This means the frame needs to regularly updated to reflect these changes.
+
+## Example
+
+| **cluster name variable** | **first strata name variable** | **population**        |
+|-----------------------|--------------------------|-----------------------|
+| oblast                    | Admin1                         | HH_number             |
+| UA12                      | Dnipropetrovska                | \[population number\] |
+| UA63                      | Kharkivska                     | \[population number\] |
+| UA05                      | Vinnytska                      | \[population number\] |
+| UA23                      | Zaporizka                      | \[population number\] |
+
+## Recommendation
+
+-   **Ensure the frame is regularly updated** to reflect demographic changes. If there's data indicating new settlements or demographic shifts (like a 'date of settlement' column), it could be used to show the need for regular updates in the sampling frame.[^1]
+
+-   **Population units**: Reflect the current population structure post-conflict.
+
+-   **Cluster names**: Ensure they match the administrative divisions in the dataset.
+:::
+
+[^1]: National Academies Press. *Measuring the Group Quarters Population in the American Community Survey*. *National Academies Press EBooks*, 2010. https://doi.org/10.17226/13075.
+
+::: notes
+**In this table:**
+
+-   "cluster name variable" corresponds to the administrative division codes (oblast).
+
+-   "first strata name variable" should be the name of the administrative division as listed in the dataset.
+
+-   "population" should reflect the latest population figures for each strata, which might require research or demographic data.
+
+You would replace "\[population number\]" with the actual population numbers for each administrative division. If you have access to updated population numbers or local sources that can provide recent data, those should be used to fill in the population column.
+
+**Recommendation**:
+
+The recommendation for regular updates for demographic changes means that the sampling frame should not only include the current administrative divisions but also be updated periodically to reflect any new developments or population movements.
+
+In the table provided, demographic changes would be reflected by adjusting the "population" figures regularly to match the current demographics. If there are new settlements or cities within the oblasts, these should be added as new rows, ensuring that the sampling frame captures the entire population accurately and is up-to-date with any shifts or changes in the population structure.
+
+This dynamic approach maintains the sampling frame, which involves periodic revision and validation with the latest demographic data, rather than using a static set of figures.
+
+**Importance**
+
+This recommendation is important for several reasons:
+
+-   **Accuracy**: Reflects the current demographic situation, ensuring that the sample is truly representative of the population at the time of the survey.
+
+-   **Relevance**: Ensures that the data collected is pertinent to the present context, making findings more applicable for decision-making.
+
+-   **Equity**: By including new settlements or population groups, the analysis considers potentially marginalized or newly formed communities.
+
+-   **Validity**: Reduces sampling bias, increasing the validity of the survey results and subsequent analyses.
+
+Regular updates help ensure that the survey design remains robust and that the insights derived from the data are accurate and relevant to the current situation.
+:::
+
+------------------------------------------------------------------------
+
+## Optional
+
+Validate the frame with local sources or GIS data for accuracy especially if:
+
+-   The geographic scope of the assessment includes areas with dynamic population distributions or recent changes due to migration, natural disasters, or other factors.
+
+-   There is a need to ensure that all sub-populations within the geographic coverage are represented accurately, which is critical in humanitarian contexts like in Ukraine.
+
+------------------------------------------------------------------------
+
+### **2. "Sample" Section**
+
+::: callout-note
+## About
+
+The "Sample" section almost mirrors the "Sampling Frame" section with a direct connection between the frame and the actual sample drawn.
+:::
+
+**Best Practices Observed:**
+
+-   Consistency in the use of strata and cluster names between the sampling frame and the sample.
+
+-   Representation of diverse localities in the sample.
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Finding
+
+**Consistency in strata and cluster names**: The regional or demographic categories in the sampling frame match those in the actual sample data.
+
+## Example 
+
+| **cluster name variable** | **first strata name variable** | **RDS Used** | **CHW Verified** | number of surveys |
+|----------------|-------------------------|-----------|-----------|-----------|
+| locality                  | Admin1                         | (Y/N)        | (Y/N)            |                   |
+| city_1                    | UA12                           | Y            | N                | 16                |
+| city_2                    | UA63                           | N            | Y                | 6                 |
+| city_3                    | UA05                           | Y            | Y                | 17                |
+
+## Recommendations
+
+-   **Other sampling techniques**: If the dataset has variables indicating transient populations, we could account for respondent-driven sampling.[^2]
+
+-   **Cross-verification with community workers**: If there are variables indicating community health worker interactions, these could be used to cross-check the representativeness of the sample.
+
+-   **Number of surveys**: Adjust planned versus actual surveys conducted in each stratum.
+
+-   **Selected units**: Document any inaccessible areas and remove them from the sample.
+:::
+
+[^2]: Raifman, Sarah, Michelle A DeVost, Jean Digitale, Yea‐Hung Chen, and Meghan D Morris. \"Respondent-Driven Sampling: A Sampling Method for Hard-To-Reach Populations and Beyond.\" *Current Epidemiology Reports* 9, no. 1 (March 22, 2022): 38--47. https://doi.org/10.1007/s40471-022-00287-8.
+
+::: notes
+**In this table:**
+
+-   "RDS Used" (Respondent-Driven Sampling Used) is a binary indicator (Y/N) that marks whether RDS was used for sampling in a particular locality.
+
+-   "CHW Verified" (Community Health Worker Verified) is another binary indicator showing whether community health workers have verified the representativeness of the sample for each locality.
+
+-   The locality and Admin1 columns should match the actual data points in your dataset.
+
+**Recommendation**
+
+1.  **Consistency in Strata and Cluster Names**:
+
+    -   Update the "locality" and "Admin1" columns to match the actual administrative names and codes used in your dataset.
+
+    -   For example, replace "city_1" with the actual city name and "governorate_1" with the correct administrative region such as "UA12" for "Dnipropetrovska".
+
+2.  **Innovative Sampling Techniques**:
+
+    -   If there are variables indicating areas with high mobility or transient populations, consider implementing respondent-driven sampling techniques. This could involve adding a column to indicate whether respondent-driven sampling was used for particular localities.
+
+3.  **Cross-Verification with Community Health Workers**:
+
+    -   If community health workers provided data, include an additional column in your tab to record their input on the representativeness of the sample for each locality.
+
+Adjust the "number of surveys" column to reflect the actual number of surveys conducted in each area.
+
+**Importance**\
+Adding these columns provides a nuanced view of the sampling methodology, which is crucial for:
+
+1.  **Respondent-Driven Sampling (RDS) Used**:
+
+    -   **Identifies non-traditional sampling** in areas where standard methods are challenging.
+
+    -   **Improves representativeness** in transient or hard-to-reach populations.
+
+2.  **Community Health Worker (CHW) Verified**:
+
+    -   **Ensures local expertise** informs the representativeness of the sample.
+
+    -   **Enhances data reliability**, especially in areas where formal data collection is difficult.
+
+These additions aid in understanding and improving sampling strategies, leading to more reliable and actionable insights from the analysis.
+:::
+
+------------------------------------------------------------------------
+
+### **3. "Extended DAP" Section**
+
+::: callout-note
+## About
+
+The "Extended DAP" (Data Analysis Plan) section includes research questions, hypotheses, indicators, and variables. It guides the analytical approach for specific research questions.
+:::
+
+**Best Practices Observed:**
+
+-   Structured approach with clear hypotheses, indicators, and variables.
+
+-   Focus on relevant research questions with a defined hypothesis type.
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Finding
+
+**Structured approach to data analysis**: The dataset has different health indicators, which can be used to demonstrate structured analysis around hypotheses like "Access to clean water is less than 50% in rural areas".
+
+## Rec 1
+
+-   **Primary research question:** What is the impact of proximity to conflict zones on health service availability?
+
+-   **Sub-research questions:** How does the damage to infrastructure correlate with disruptions in medical services? What are the critical staffing shortages affecting healthcare delivery?
+
+-   **Type of analysis**: Define analyses planned versus those conducted.
+
+-   **Hypotheses**: Link each analysis to the hypotheses it's intended to test.
+
+## Rec 2
+
+-   **Advanced statistical models**: Identify variables that demonstrate hierarchical or complex data structures, such as patient outcomes within hospitals or schools within communities. For example, if the Ukrain dataset includes health outcomes by hospital and each hospital serves a specific community, so use mixed-effects models to account for the nesting of patients within hospitals.[^3]
+
+## Rec 3
+
+-   **Enhanced data visualization**: Use the geographic data in the dataset to create maps that display health indicators. For instance, if there are variables for clean water access and location, map these indicators to visually represent how access varies across different areas.
+:::
+
+[^3]: Harrison, Xavier A, Lynda Donaldson, M. Correa-Cano, Julian C Evans, David N Fisher, Cecily, Beth S Robinson, David J Hodgson, and Richard Inger. \"A Brief Introduction to Mixed Effects Modelling and Multi-Model Inference in Ecology.\" *PeerJ* 6 (May 23, 2018): e4794--94. https://doi.org/10.7717/peerj.4794.
+
+::: notes
+These steps are important because they:
+
+1.  **Ensure Rigor**: By clearly defining research questions and hypotheses, you ensure that your analysis is rigorous and systematically addresses the objectives of the study.
+
+2.  **Provide Depth**: Advanced statistical models like mixed-effects models account for the hierarchical nature of data, which can lead to more accurate conclusions about factors affecting health services.
+
+3.  **Facilitate Understanding**: Data visualization aids in the comprehension of complex information and reveals patterns that might not be apparent from raw data alone, especially when dealing with geographic variations in health service impacts.
+
+More information:
+
+-   **Advanced Statistical Models**: If your dataset includes variables that can be nested (like individual responses within hospitals), use mixed-effects models to account for this structure in the data analysis. This will allow you to isolate the effect of the hospital on the response variable, controlling for individual differences.
+:::
+
+------------------------------------------------------------------------
 
 ## Github: cleaningtools
 
+------------------------------------------------------------------------
+
 ## Github: analysistools
+
+------------------------------------------------------------------------
 
 ## Github: presentresults
 
