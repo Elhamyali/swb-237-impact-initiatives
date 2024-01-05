@@ -298,6 +298,44 @@ More information:
 
 ## Github: cleaningtools
 
+::: callout-note
+## About
+
+The **`cleaningtools`** package on GitHub provides a comprehensive set of tools for data cleaning and is structured into three main components​​.
+
+**Check**: This component includes functions to flag potential issues with data such as personal identifiable information (**`check_pii`**)​​, audit durations (**`create_audit_list`**, **`add_duration_from_audit`**)​​, and outliers (**`check_outliers`**)​​.
+:::
+
+------------------------------------------------------------------------
+
+**Best practices observed:**
+
+-   **PII Scrubbing**: The **`check_pii`** function is a good practice to ensure data privacy by identifying potential personal information​​.
+
+-   **Audit Trails**: By checking audit file durations, this tool ensures data quality by confirming reasonable response times​​.
+
+-   **Outlier Detection**: The **`check_outliers`** function is critical for identifying and handling anomalies in the dataset which can skew results​​.
+
+------------------------------------------------------------------------
+
+Recommendations for improvement:
+
+-   **Missing data**: Implement methods for handling missing data, possibly through imputation techniques or weighted adjustments.
+
+-   **Size bias**: Provide tools for correcting size bias, such as scaling factors based on sample versus population size.
+
+-   **Calibration techniques**: Include functions for calibration to adjust survey weights based on known population characteristics, which can help in producing better estimates.
+
+------------------------------------------------------------------------
+
+To apply these recommendations to the Ukraine dataset, we would:
+
+-   Assess the extent and pattern of missing data.
+
+-   Apply correctional weights if size bias is detected in the sample.
+
+-   Use calibration techniques to align survey results with known benchmarks, improving the accuracy of estimates.
+
 ------------------------------------------------------------------------
 
 ## Github: analysistools

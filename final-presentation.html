@@ -715,6 +715,47 @@ Adding these columns provides a nuanced view of the sampling methodology, which 
 <aside><ol class="aside-footnotes"><li id="fn3"><p>Harrison, Xavier A, Lynda Donaldson, M. Correa-Cano, Julian C Evans, David N Fisher, Cecily, Beth S Robinson, David J Hodgson, and Richard Inger. "A Brief Introduction to Mixed Effects Modelling and Multi-Model Inference in Ecology." <em>PeerJ</em> 6 (May 23, 2018): e4794–94. https://doi.org/10.7717/peerj.4794.</p></li></ol></aside></section>
 <section id="github-cleaningtools" class="slide level2">
 <h2>Github: cleaningtools</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>About</strong></p>
+</div>
+<div class="callout-content">
+<p>The <strong><code>cleaningtools</code></strong> package on GitHub provides a comprehensive set of tools for data cleaning and is structured into three main components​​.</p>
+<p><strong>Check</strong>: This component includes functions to flag potential issues with data such as personal identifiable information (<strong><code>check_pii</code></strong>)​​, audit durations (<strong><code>create_audit_list</code></strong>, <strong><code>add_duration_from_audit</code></strong>)​​, and outliers (<strong><code>check_outliers</code></strong>)​​.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p><strong>Best practices observed:</strong></p>
+<ul>
+<li><p><strong>PII Scrubbing</strong>: The <strong><code>check_pii</code></strong> function is a good practice to ensure data privacy by identifying potential personal information​​.</p></li>
+<li><p><strong>Audit Trails</strong>: By checking audit file durations, this tool ensures data quality by confirming reasonable response times​​.</p></li>
+<li><p><strong>Outlier Detection</strong>: The <strong><code>check_outliers</code></strong> function is critical for identifying and handling anomalies in the dataset which can skew results​​.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>Recommendations for improvement:</p>
+<ul>
+<li><p><strong>Missing data</strong>: Implement methods for handling missing data, possibly through imputation techniques or weighted adjustments.</p></li>
+<li><p><strong>Size bias</strong>: Provide tools for correcting size bias, such as scaling factors based on sample versus population size.</p></li>
+<li><p><strong>Calibration techniques</strong>: Include functions for calibration to adjust survey weights based on known population characteristics, which can help in producing better estimates.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>To apply these recommendations to the Ukraine dataset, we would:</p>
+<ul>
+<li><p>Assess the extent and pattern of missing data.</p></li>
+<li><p>Apply correctional weights if size bias is detected in the sample.</p></li>
+<li><p>Use calibration techniques to align survey results with known benchmarks, improving the accuracy of estimates.</p></li>
+</ul>
 </section>
 <section id="github-analysistools" class="slide level2">
 <h2>Github: analysistools</h2>
