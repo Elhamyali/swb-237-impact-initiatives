@@ -178,11 +178,13 @@ The "Sample" section almost mirrors the "Sampling Frame" section with a direct c
 | city_2                    | UA63                           | N            | Y                | 6                 |
 | city_3                    | UA05                           | Y            | Y                | 17                |
 
-## Recommendations
+## Rec 1 - 2
 
 -   **Other sampling techniques**: If the dataset has variables indicating transient populations, we could account for respondent-driven sampling.[^2]
 
 -   **Cross-verification with community workers**: If there are variables indicating community health worker interactions, these could be used to cross-check the representativeness of the sample.
+
+## Rec 3 - 4
 
 -   **Number of surveys**: Adjust planned versus actual surveys conducted in each stratum.
 
