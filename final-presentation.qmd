@@ -52,11 +52,11 @@ This report uses the 2023 **Ukraine \| REACH Health Sector Need Assessment** dat
 
 ### **Key sections**
 
--   [1. "Sampling Frame" Section]
+-   \[1. "Sampling Frame" Section\]
 
--   [2. "Sample" Section]
+-   \[2. "Sample" Section\]
 
--   [3. "Extended DAP" Section]
+-   \[3. "Extended DAP" Section\]
 
 ------------------------------------------------------------------------
 
@@ -84,7 +84,7 @@ The "Sampling Frame" section includes information on cluster names, strata varia
 ## Example
 
 | **cluster name variable** | **first strata name variable** | **population**        |
-|-----------------------|--------------------------|-----------------------|
+|---------------------------|--------------------------------|-----------------------|
 | oblast                    | Admin1                         | HH_number             |
 | UA12                      | Dnipropetrovska                | \[population number\] |
 | UA63                      | Kharkivska                     | \[population number\] |
@@ -169,10 +169,10 @@ The "Sample" section almost mirrors the "Sampling Frame" section with a direct c
 
 **Consistency in strata and cluster names**: The regional or demographic categories in the sampling frame match those in the actual sample data.
 
-## Example 
+## Example
 
 | **cluster name variable** | **first strata name variable** | **RDS Used** | **CHW Verified** | number of surveys |
-|----------------|-------------------------|-----------|-----------|-----------|
+|---------------------------|--------------------------------|--------------|------------------|-------------------|
 | locality                  | Admin1                         | (Y/N)        | (Y/N)            |                   |
 | city_1                    | UA12                           | Y            | N                | 16                |
 | city_2                    | UA63                           | N            | Y                | 6                 |
@@ -191,7 +191,7 @@ The "Sample" section almost mirrors the "Sampling Frame" section with a direct c
 -   **Selected units**: Document any inaccessible areas and remove them from the sample.
 :::
 
-[^2]: Raifman, Sarah, Michelle A DeVost, Jean Digitale, Yea‐Hung Chen, and Meghan D Morris. \"Respondent-Driven Sampling: A Sampling Method for Hard-To-Reach Populations and Beyond.\" *Current Epidemiology Reports* 9, no. 1 (March 22, 2022): 38--47. https://doi.org/10.1007/s40471-022-00287-8.
+[^2]: Raifman, Sarah, Michelle A DeVost, Jean Digitale, Yea‐Hung Chen, and Meghan D Morris. "Respondent-Driven Sampling: A Sampling Method for Hard-To-Reach Populations and Beyond." *Current Epidemiology Reports* 9, no. 1 (March 22, 2022): 38--47. https://doi.org/10.1007/s40471-022-00287-8.
 
 ::: notes
 **In this table:**
@@ -280,7 +280,7 @@ The "Extended DAP" (Data Analysis Plan) section includes research questions, hyp
 -   **Enhanced data visualization**: Use the geographic data in the dataset to create maps that display health indicators. For instance, if there are variables for clean water access and location, map these indicators to visually represent how access varies across different areas.
 :::
 
-[^3]: Harrison, Xavier A, Lynda Donaldson, M. Correa-Cano, Julian C Evans, David N Fisher, Cecily, Beth S Robinson, David J Hodgson, and Richard Inger. \"A Brief Introduction to Mixed Effects Modelling and Multi-Model Inference in Ecology.\" *PeerJ* 6 (May 23, 2018): e4794--94. https://doi.org/10.7717/peerj.4794.
+[^3]: Harrison, Xavier A, Lynda Donaldson, M. Correa-Cano, Julian C Evans, David N Fisher, Cecily, Beth S Robinson, David J Hodgson, and Richard Inger. "A Brief Introduction to Mixed Effects Modelling and Multi-Model Inference in Ecology." *PeerJ* 6 (May 23, 2018): e4794--94. https://doi.org/10.7717/peerj.4794.
 
 ::: notes
 These steps are important because they:
